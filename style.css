@@ -1,0 +1,37 @@
+/* Tambahkan kode CSS kalian di file ini */
+header {
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 10px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+} 
+
+#submit-form {
+    background-color: rgb(84, 189, 114);
+    color: white;
+    pad: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+#submit-form:hover {
+  background-color: rgb(146, 227, 169);  
+}
