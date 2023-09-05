@@ -1,32 +1,75 @@
 /* Tambahkan kode CSS kalian di file ini */
+*{
+    box-sizing: border-box;
+}
+.html,body{
+    background-color: rgba(196, 192, 192, 0.171);
+    margin: 0;
+    padding: 0;
+}
 header {
     justify-content: space-between;
     text-align: center;
+    background-color: rgb(84, 189, 114);
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 30px;
+    background-color: rgb(63, 153, 89);
+    height: 40px;
+    font-weight: bold;
+}
+
+nav ul li{
+    background-color: rgb(181, 233, 196);
+    margin-right: 40px;
+    padding: 10px 30px;
+    width: 25%;
 }
 
 #content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 150px 40px;
+
 }
 
-#contact form {
+#description, #description2 {
+    font-size: 20px;
+}
+
+.clear{
+    clear: left;
+}
+
+.contact {
     display: flex;
     flex-direction: column;
-    width: 30%;
-} 
+    text-align: center;
+    max-width: 50%;
+    margin-bottom: 200px;
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+}
 
 #submit-form {
     background-color: rgb(84, 189, 114);
     color: white;
-    pad: 10px 20px;
+    padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
     border: none;
@@ -34,4 +77,72 @@ nav ul {
 
 #submit-form:hover {
   background-color: rgb(146, 227, 169);  
+}
+
+input{
+    margin: 5px;
+}
+
+footer{
+    background-color: rgb(146, 227, 169);
+    color: black;
+    width: 100%;
+    padding-top: 20px;
+    border: 1px;
+    padding-bottom: 20px;
+    height: 300px;
+}
+
+.footer-content, .social-media-list{
+    padding: 20px;
+}
+
+.section-title{
+    border-bottom: 2px solid rgb(182, 179, 179);
+    text-align: center;
+}
+
+.footer-list{
+    height: 60px;
+    border-bottom: 2px solid rgb(182, 179, 179);
+    text-align: center;
+}
+
+.footer-list li{
+    float: left;
+    list-style: none;
+    width: 25%;
+    padding: 5px;
+    font-size: 18px;
+    color: black;
+}
+
+.footer-content{
+    margin-top: 20px;
+}
+
+.footer-content p{
+    margin:0 200px 3px 200px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.social-media-list{
+    text-align: center;
+}
+
+.social-media-list i{
+    margin-right: 30px;
+    color: #f9f7f7;
+    margin-bottom: 20px;
+}
+
+.footer-bottom{
+    width: 100%;
+    background-color: rgb(63, 153, 89);
+    text-align: center;
+    height: 80px;
+    padding: 1px;
+    color: white;
 }
