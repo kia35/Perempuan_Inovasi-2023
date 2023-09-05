@@ -37,7 +37,7 @@ nav ul li{
     width: 25%;
 }
 
-#content,#content2  {
+#content, #content2  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ nav ul li{
 
 }
 
-#description, #description2,#description3 {
+#description, #description2, #description3 {
     font-size: 20px;
 }
 
