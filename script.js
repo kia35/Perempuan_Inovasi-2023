@@ -1,26 +1,24 @@
-// Tambahkan kode JavaScript kalian di file ini
-function handleGetFormData () {
+function handleGetFormData() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const city = document.getElementById('city').value;
   const zipCode = document.getElementById('zip-code').value;
-  const status = document.getElementById('status').checked ? 'checked' : 'unchecked';
+  const status = document.getElementById('status').checked ? 'on' : 'off';
 
   const data = {
     name: name,
     email: email,
     city: city,
     zipCode: zipCode,
-    status: status
-  }
+    status: status,
+  };
 
   return data;
 }
 
-function isNumber (string) {
-  i = document.getElementById('zip-code');
+function isNumber(string) {
   for (let i = 0; i < string.length; i++) {
-    if (isNaN(string[i])) {
+    if (isNaN(string[i]) || string.trim() === "") {
       return false;
     }
   }
@@ -28,40 +26,34 @@ function isNumber (string) {
 }
 
 function checkboxIsChecked() {
-  const data = handleGetFormData();
-
-  const nilaiStatus = data.status;
-
-  return nilaiStatus === 'checked';
+  const statusCheckbox = document.getElementById('status');
+  return statusCheckbox.checked;
 }
 
-
 function validateFormData(data) {
-
   if (data === null) {
     return false;
   }
   if (!isNumber(data.zipCode)) {
     return false;
   }
-  if (!checkboxIsChecked(data.status)) {
+  if (!checkboxIsChecked()) {
     return false;
   }
   return true;
 }
 
-const kirim = document.getElementById('submit-form');
-kirim.addEventListener('click', submit);
+const form = document.getElementById('form');
+form.addEventListener('submit', submit);
 
-
-function submit (event) {
+function submit(event) {
   event.preventDefault();
-  const data = handleGetFormData();
-  const isValid = validateFormData(data);
+  const formData = handleGetFormData(); // Get the form data
+  const isValid = validateFormData(formData);
 
   if (!isValid) {
-    alert ('Periksa form anda sekali lagi');
+    alert('Periksa form anda sekali lagi');
   } else {
-    alert ('');
+    alert('Terimakasih.');
   }
 }
