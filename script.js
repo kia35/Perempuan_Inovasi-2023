@@ -1,50 +1,67 @@
 // Tambahkan kode JavaScript kalian di file ini
-function handleGetFormData() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const city = document.getElementById("city").value;
-  const zipCode = document.getElementById("zip-code").value;
-  const status = document.getElementById("status").checked;
+function handleGetFormData () {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const city = document.getElementById('city').value;
+  const zipCode = document.getElementById('zip-code').value;
+  const status = document.getElementById('status').checked ? 'checked' : 'unchecked';
 
-  return {
-    name,
-    email,
-    city,
-    zipCode,
-    status,
-  };
+  const data = {
+    name: name,
+    email: email,
+    city: city,
+    zipCode: zipCode,
+    status: status
+  }
+
+  return data;
 }
 
-
-function isNumber(str) {
-
-  return !isNaN(str);
+function isNumber (string) {
+  i = document.getElementById('zip-code');
+  for (let i = 0; i < string.length; i++) {
+    if (isNaN(string[i])) {
+      return false;
+    }
+  }
+  return true;
 }
-
 
 function checkboxIsChecked() {
-  const status = document.getElementById('status');
-  return status.checked;
+  const data = handleGetFormData();
+
+  const nilaiStatus = data.status;
+
+  return nilaiStatus === 'checked';
 }
 
 
-function validateFormData(obj) {
-  return obj !== null && typeof obj.zipCode === 'number' && document.getElementById('status').checked;
+function validateFormData(data) {
+  const data = handleGetFormData();
+  if (data === null) {
+    return false;
+  }
+  if (!isNumber(data.zipCode)) {
+    return false;
+  }
+  if (!checkboxIsChecked(data.status)) {
+    return false;
+  }
+  return true;
 }
 
+const kirim = document.getElementById('submit-form');
+kirim.addEventListener('click', submit);
 
-let btnKirim = document.getElementById("submit-form")
-console.log(btnKirim);
-btnKirim.addEventListener("click", submit)
 
-function submit(event) {
+function submit (event) {
   event.preventDefault();
-  const warning = document.getElementById('warning');
-  if (!validateFormData(formData)) {
-    warning.innerHTML = 'Periksa form anda sekali lagi';
+  const data = handleGetFormData();
+  const isValid = validateFormData(data);
+
+  if (!isValid) {
+    alert ('Periksa form anda sekali lagi');
   } else {
-    warning.innerHTML = '';
+    alert ('');
   }
 }
-
-document.getElementById('form').addEventListener('submit', submit);
