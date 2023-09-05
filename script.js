@@ -54,6 +54,7 @@ function submit(event) {
   if (!isValid) {
     alert('Periksa form anda sekali lagi');
   } else {
-    alert('Terimakasih.');
+    alert("Terimakasih "+ data.name);
   }
+  console.log(handleGetFormData);
 }
