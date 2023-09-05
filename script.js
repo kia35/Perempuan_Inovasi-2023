@@ -37,7 +37,7 @@ function checkboxIsChecked() {
 
 
 function validateFormData(data) {
-  const data = handleGetFormData();
+
   if (data === null) {
     return false;
   }
