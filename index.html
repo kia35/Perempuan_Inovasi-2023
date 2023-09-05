@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="script.js" defer ></script>
 </head>
 <body>
     <!-- Tambahkan kode kalian di sini -->
     <header>
         <div>
-            <h1>Kesehatan Mental</h1>
+            <h1>MeCa</h1>
         </div>
 
         <nav>
             <ul>
                 <li>Home</li>
-                <li>Pengertian</li>
-                <li>Penyebab</li>
-                <li>Gangguan</li>
-                <li>Pengobatan</li>
-                <li>Pencegahan</li>
+                <li>Misi</li>
+                <li>Kontak</li>
+                <li>Blog</li>
             </ul>
         </nav>
     </header>
@@ -29,11 +27,17 @@
     <main>
         <section id="content">
             <div>
-                <h1>Kesehatan Mental?</h1>
+                <h1><b>Kesehatan Mental?</b></h1>
                 <p id="description">
                     Kesehatan mental adalah 
                     kesehatan yang berkaitan dengan kondisi 
                     emosi, kejiwaan, dan psikis seseorang.
+                </p>
+                <p id="description2">
+                    Kesehatan mental yang baik adalah kondisi 
+                    ketika batin kita berada dalam keadaan tentram dan tenang, 
+                    sehingga memungkinkan kita untuk menikmati kehidupan 
+                    sehari-hari dan menghargai orang lain di sekitar.
                 </p>
             </div>
 
@@ -42,24 +46,50 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section class="contact">
             <h1>Hubungi Kami</h1>
-            <form>
+            <form class="contact-list">
                 <input type="text" placeholder="Nama" id="name">
                 <input type="text" placeholder="Kota" id="city">
                 <input type="email" placeholder="Email" id="email">
                 <input type="number" placeholder="Kode Pos" id="zip-code">
                 <label id="check">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label>
                 <input type="checkbox" id="status">
-                <button type="button" id="submit-form">Submit</button>
+                <button type="submit" class= "btn" id="submit-form">Submit</button>
                 <div id="warning"></div>
             </form>
         </section>
     </main>
 
     <footer>
-        <div class="copyright">
-            <p> &copy;2023 ZAKIA RAHMAH </p>
+        <div class="container">
+            <div class="footer-list">
+                <ul>
+                    <li>TENTANG KAMI</li>
+                    <li>VISI</li>
+                    <li>MISI</li>
+                    <li>KONTAK</li>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <p>
+                    MeCa merupakan penyedia informasi seputar kesehatan mental.
+                    MeCa hadir untuk membantu pembaca untuk mencari informasi berupa mitos, 
+                    fakta dan hal unik mengenai kesehatan mental dan juga psikologi.
+                </p>
+            </div>
+
+            <div class="social-media-list">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p> &copy;2023 ZAKIA RAHMAH</p>
             <p>Supported by <a href="https://skilvul.com" id="link">Skilvul</a></p>
         </div>
     </footer>
